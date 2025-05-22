@@ -27,10 +27,9 @@ namespace FPorter300.WMO
 
         static void Main(string[] args)
         {
-            var exeDir = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-
-            var sourceDir = Path.Combine(exeDir, "input");
-            var outputDir = Path.Combine(exeDir, "output");
+            var exeDir = Path.GetDirectoryName(AppContext.BaseDirectory);
+            var sourceDir = Path.Combine(exeDir!, "input");
+            var outputDir = Path.Combine(exeDir!, "output");
 
             if (!Directory.Exists(sourceDir))
             {
